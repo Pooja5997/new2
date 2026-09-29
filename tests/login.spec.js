@@ -20,5 +20,5 @@ test('Register User - Signup', async ({ page }) => {
     // Verify Account Information page
     await expect(page.getByText('Enter Account Information')).toBeVisible()
 
-    waitforTimeout(5000)
+    await page.waitForTimeout(5000)
 })

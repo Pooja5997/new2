@@ -18,5 +18,5 @@ test('Login to Automation Exercise', async ({ page }) => {
     await page.getByRole('button', { name: 'Login' }).click()
 
     // Pause for inspection
-    await page.pause()
+    await page.waitForTimeout(5000)
 })
