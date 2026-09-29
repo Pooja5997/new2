@@ -11,14 +11,12 @@ test('Register User - Signup', async ({ page }) => {
     // Enter name
     await page.getByPlaceholder('Name').fill('Pooja')
 
-    // Enter email
-    await page.locator('input[data-qa="signup-email"]').fill('pooja123456@gmail.com')
+    // Enter unique email
+    await page.locator('input[data-qa="signup-email"]').fill('pooja987654@gmail.com')
 
     // Click Signup button
     await page.getByRole('button', { name: 'Signup' }).click()
 
     // Verify Account Information page
     await expect(page.getByText('Enter Account Information')).toBeVisible()
-
-    await page.waitForTimeout(5000)
 })
